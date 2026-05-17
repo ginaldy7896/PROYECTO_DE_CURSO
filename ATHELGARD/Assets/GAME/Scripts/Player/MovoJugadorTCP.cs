@@ -111,9 +111,12 @@ public class MovoJugadorTCP : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && enPiso)
         {
+            anima.SetTrigger("salto");
+
             veloJugador.y =
-                Mathf.Sqrt(salto * -2f * gravedad);
+           Mathf.Sqrt(salto * -2f * gravedad);
         }
+
 
         veloJugador.y += gravedad * Time.deltaTime;
 
@@ -155,7 +158,18 @@ public class MovoJugadorTCP : MonoBehaviour
             animX *= -1;
         }
 
+
+        bool moving =
+        Mathf.Abs(X) > 0.1f ||
+        Mathf.Abs(Z) > 0.1f;
+
+
+        anima.SetBool("Moving", moving);
+        anima.SetBool("SetPiso", enPiso);
+
         anima.SetFloat("XSpeed", animX, 0.1f, Time.deltaTime);
         anima.SetFloat("ZSpeed", animZ, 0.1f, Time.deltaTime);
     }
+
+   
 }
