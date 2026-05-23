@@ -1,28 +1,31 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class MenuPrincipalManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public GameObject panelInformacion; 
 
-    public void EmpezarJuego()
+    public static GameManager Instance { get; private set; }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private void Awake()
     {
-        SceneManager.LoadScene(1);
+        // Regla del Singleton: Si ya existe uno, se destruye el nuevo
+        if (Instance != null && Instance != FindAnyObjectByType<GameManager>())
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // No se destruye al cambiar de escena
     }
 
-    public void AbrirInformacion()
+    void Start()
     {
-        panelInformacion.SetActive(true);
+        
     }
 
-    public void CerrarInformacion()
+    // Update is called once per frame
+    void Update()
     {
-        panelInformacion.SetActive(false);
-    }
-
-    public void SalirDelJuego()
-    {
-        Debug.Log("Saliendo del juego...");
-        Application.Quit();
+        
     }
 }
