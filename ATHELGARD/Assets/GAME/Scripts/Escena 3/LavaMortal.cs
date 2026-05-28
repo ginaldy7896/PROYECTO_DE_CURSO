@@ -6,27 +6,35 @@ public class LavaMortal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !murio)
+        MovoJugadorTCP jugador = other.GetComponentInParent<MovoJugadorTCP>();
+
+        if (jugador != null && !murio)
         {
             murio = true;
 
-            // 1. Buscamos el CharacterController en el personaje que cayó a la lava
-            CharacterController controller = other.GetComponent<CharacterController>();
-
-            // 2. Si el personaje usa CharacterController, lo apagamos para que no se bugee
+            // 1. Apagamos el CharacterController para poder moverlo
+            CharacterController controller = jugador.GetComponent<CharacterController>();
             if (controller != null)
             {
                 controller.enabled = false;
             }
 
-            // 3. Tu lógica original: Buscamos el mánager y lo regresamos al checkpoint
+            // 2. EL TRUCO: Accedemos por código a la variable de tus compañeros y la reseteamos a cero
+            // Esto evita que el personaje conserve la velocidad de caída infinita
+            System.Reflection.FieldInfo infoVelo = typeof(MovoJugadorTCP).GetField("veloJugador", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            if (infoVelo != null)
+            {
+                infoVelo.SetValue(jugador, Vector3.zero);
+            }
+
+            // 3. Tu lógica de regreso normal
             CheckpointManager cp = FindFirstObjectByType<CheckpointManager>();
             if (cp != null)
             {
                 cp.Regresar();
             }
 
-            // 4. Lo volvemos a encender inmediatamente para que pueda seguir caminando
+            // 4. Lo volvemos a prender limpio y sin velocidad acumulada
             if (controller != null)
             {
                 controller.enabled = true;
