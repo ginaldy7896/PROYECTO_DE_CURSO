@@ -26,6 +26,8 @@ public class MovoJugadorTCP : MonoBehaviour
     [Header("Animator")]
     public Animator anima;
 
+    public AudioClip sonidoQuejido;
+
     private bool enPiso;
 
     private Vector3 veloJugador;
@@ -171,5 +173,14 @@ public class MovoJugadorTCP : MonoBehaviour
         anima.SetFloat("ZSpeed", animZ, 0.1f, Time.deltaTime);
     }
 
-   
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Arma"))
+        {
+            GameManager.Instance.PerderVida();
+            AudioSource.PlayClipAtPoint(sonidoQuejido, transform.position);
+        }
+    }
+
+
 }

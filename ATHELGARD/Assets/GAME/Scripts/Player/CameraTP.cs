@@ -13,6 +13,7 @@ public class CameraTP : MonoBehaviour
 
     public float cameraRadius = 0.3f;
     public LayerMask collisionMask;
+   
 
     Vector3 curRotation;
     Vector3 smoothVelocity = Vector3.zero;
