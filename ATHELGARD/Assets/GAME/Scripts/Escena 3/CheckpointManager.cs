@@ -28,8 +28,7 @@ public class CheckpointManager : MonoBehaviour
         {
             cc.enabled = false;
 
-            player.position =
-            checkpoints.Peek() + Vector3.up;
+            player.position = checkpoints.Peek() + Vector3.up;
 
             cc.enabled = true;
         }
