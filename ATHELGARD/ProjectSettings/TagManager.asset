@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Arma
   - Suelo
+  - Terrain
   layers:
   - Default
   - TransparentFX
