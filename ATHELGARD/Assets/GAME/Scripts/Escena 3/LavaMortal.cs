@@ -40,6 +40,8 @@ public class LavaMortal : MonoBehaviour
             }
 
             murio = false;
+
+            GameManager.Instance.PerderVida();
         }
     }
 }
