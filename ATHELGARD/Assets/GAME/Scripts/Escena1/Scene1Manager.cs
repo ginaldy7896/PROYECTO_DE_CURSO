@@ -39,14 +39,15 @@ public class Scene1Manager : MonoBehaviour
         }
     }
 
-    
+
 
     void Update()
     {
         bool presionoSalto = Input.GetButtonDown("Jump");
         // Si ya detectamos el movimiento una vez, ignoramos el resto del Update
-        if (instruccionesCompletadas) { 
-        
+        if (instruccionesCompletadas)
+        {
+
             textoCartel.text = "Preciona espacio para saltar, y el mouse para mirar alrededor. ¡Explora el entorno!";
 
             if (presionoSalto)
@@ -120,7 +121,7 @@ public class Scene1Manager : MonoBehaviour
                 yield return null;
             }
 
-            
+
             contenedorCartelUI.gameObject.SetActive(false);
         }
     }
