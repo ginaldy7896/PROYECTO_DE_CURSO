@@ -11,10 +11,12 @@ public class Scene1Manager : MonoBehaviour
     public TextMeshProUGUI textoCartel;
     public TextMeshProUGUI textoMision;
 
+    public GameObject panelFinal;
+
     [Header("Mision")]
     public int fragmentosNecesarios = 5;
     private int fragmentosActuales = 0;
-
+    
     [Header("Configuración del Desvanecimiento")]
     public float tiempoEsperaAntesDelFade = 1.5f;
     public float duracionDelFade = 1.0f;
@@ -93,6 +95,9 @@ public class Scene1Manager : MonoBehaviour
         textoMision.text = "Misión completada";
 
         Debug.Log("MISIÓN COMPLETADA");
+
+        panelFinal.SetActive(true);
+
 
         // Aquí puedes:
         // abrir puerta

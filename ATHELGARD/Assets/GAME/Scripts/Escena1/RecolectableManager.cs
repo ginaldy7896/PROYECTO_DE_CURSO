@@ -9,6 +9,7 @@ public class RecolectableManager : MonoBehaviour
 
     private static RecolectableManager instancia;
     private int recolectados = 0;
+    public GameObject puerta;
 
     [Header("Narrador")]
     public Subtitulos narrador;
@@ -39,6 +40,7 @@ public class RecolectableManager : MonoBehaviour
         if (TodosRecolectados())
         {
             Debug.Log("TODOS RECOLECTADOS");
+            puerta.SetActive(false);
         }
     }
 
