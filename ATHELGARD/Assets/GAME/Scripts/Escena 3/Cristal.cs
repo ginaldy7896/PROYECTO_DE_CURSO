@@ -18,20 +18,10 @@ public class Cristal : MonoBehaviour
 
     void Update()
     {
-        transform.position =
-            posicionInicial +
-            Vector3.up *
-            Mathf.Sin(
-                Time.time *
-                velocidadFlotar
-            ) * altura;
+        transform.position = posicionInicial + Vector3.up *
+            Mathf.Sin(Time.time * velocidadFlotar) * altura;
 
-        transform.Rotate(
-            0,
-            velocidadRotacion *
-            Time.deltaTime,
-            0
-        );
+        transform.Rotate(0,velocidadRotacion * Time.deltaTime,0 );
     }
 
     private void OnTriggerEnter(Collider other)
