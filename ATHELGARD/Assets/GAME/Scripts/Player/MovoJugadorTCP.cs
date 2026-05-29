@@ -28,6 +28,8 @@ public class MovoJugadorTCP : MonoBehaviour
 
     public AudioClip sonidoQuejido;
 
+    public AudioClip pasos;
+
     private bool enPiso;
 
     private Vector3 veloJugador;
@@ -135,6 +137,10 @@ public class MovoJugadorTCP : MonoBehaviour
             {
                 animZ = 2f;
             }
+
+           
+
+
         }
 
         
@@ -142,11 +148,13 @@ public class MovoJugadorTCP : MonoBehaviour
         if (X > 0)
         {
             animX = 0.5f;
+           
         }
 
         if (X < 0)
         {
             animX = -0.5f;
+           
         }
 
         float dot =
@@ -172,6 +180,8 @@ public class MovoJugadorTCP : MonoBehaviour
         anima.SetFloat("XSpeed", animX, 0.1f, Time.deltaTime);
         anima.SetFloat("ZSpeed", animZ, 0.1f, Time.deltaTime);
     }
+
+
 
     void OnTriggerEnter(Collider other)
     {

@@ -9,6 +9,7 @@ public class Pie : MonoBehaviour
         if (other.CompareTag("Suelo"))
         {
             paso.Play();
+            Debug.Log("Paso detectado en el suelo");
         }
     }
 }
