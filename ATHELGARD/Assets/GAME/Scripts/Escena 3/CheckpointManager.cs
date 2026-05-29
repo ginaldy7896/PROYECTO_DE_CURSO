@@ -3,8 +3,7 @@ using System.Collections.Generic;
 
 public class CheckpointManager : MonoBehaviour
 {
-    Stack<Vector3> checkpoints =
-        new Stack<Vector3>();
+    Stack<Vector3> checkpoints = new Stack<Vector3>();
 
     public Transform player;
 

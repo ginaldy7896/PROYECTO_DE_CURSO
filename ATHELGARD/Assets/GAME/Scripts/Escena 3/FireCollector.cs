@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class FireCollector : MonoBehaviour
 {
-    public List<GameObject> fuegos =
-    new List<GameObject>();
+    public List<GameObject> fuegos = new List<GameObject>();
 
     public int necesarios = 5;
 
