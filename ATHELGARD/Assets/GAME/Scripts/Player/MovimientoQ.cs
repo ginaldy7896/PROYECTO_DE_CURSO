@@ -82,4 +82,7 @@ public class MovimientoQ : MonoBehaviour
         anima.SetFloat("XSpeed", animX);
         anima.SetFloat("ZSpeed", animZ);
     }
+
+
+    
 }
