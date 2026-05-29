@@ -29,8 +29,8 @@ public class AnimarLava : MonoBehaviour
 
             
             materialLava.SetTextureOffset("_MainTex", offsetActual);
-            materialLava.SetTextureOffset("_BumpMap", offsetActual);  // Mueve el relieve físico
-            materialLava.SetTextureOffset("_EmissionMap", offsetActual); // Mueve el brillo rojo
+            materialLava.SetTextureOffset("_BumpMap", offsetActual);  
+            materialLava.SetTextureOffset("_EmissionMap", offsetActual); 
         }
     }
 }
