@@ -34,6 +34,6 @@ public class PortalVideo : MonoBehaviour
 
     public void siguienteEscena()
     {
-        SceneManager.LoadScene("SceneMenu");
+        SceneManager.LoadScene(2);
     }
 }

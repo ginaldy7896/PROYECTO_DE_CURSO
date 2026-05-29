@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/GAME/Scenes/SceneMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/GAME/Scenes/BosqueTierra.unity
-    guid: 997858d2e54923e4a9162bb9ff311c23
+    path: Assets/GAME/Scenes/VideoJuego1.unity
+    guid: 70271c0da9e036041be789ff4b33269f
+  - enabled: 1
+    path: Assets/GAME/Scenes/VideoJuego2.unity
+    guid: 3ef2b629396912142a882f5fbbc28ff4
   - enabled: 1
     path: Assets/GAME/Scenes/Escena 3.unity
     guid: ac7540b82b4715842bd5ff4f8898fd3a

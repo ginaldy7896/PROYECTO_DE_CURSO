@@ -1264,7 +1264,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.95
+  MinDistance: 2
   MaxDistance: 100
   Pan2D: 0
   rolloffMode: 0
@@ -2606,7 +2606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4617036660772024948, guid: 52c7d057cba585641bb68312c10d7791, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4706116037937865665, guid: 52c7d057cba585641bb68312c10d7791, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3896,6 +3896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3759fac1c781934f97b85992e669c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  panelInformacion: {fileID: 0}
   vidasMaximas: 4
   vidasActuales: 0
   corazones:
@@ -56753,7 +56754,7 @@ Transform:
   m_GameObject: {fileID: 1692863852}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 214.589, y: 8.672, z: 262.461}
+  m_LocalPosition: {x: 240.09, y: 3.3, z: 155.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

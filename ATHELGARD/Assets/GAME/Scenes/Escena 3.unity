@@ -728,6 +728,10 @@ PrefabInstance:
       propertyPath: followCamera
       value: 
       objectReference: {fileID: 355763020}
+    - target: {fileID: 2739976672312802663, guid: 6de35a38fe43e4e4e99aa2d319e06376, type: 3}
+      propertyPath: sonidoQuejido
+      value: 
+      objectReference: {fileID: 8300000, guid: 186ae82a5e49e0a468141a574c91cfed, type: 3}
     - target: {fileID: 4111630695333668708, guid: 6de35a38fe43e4e4e99aa2d319e06376, type: 3}
       propertyPath: m_Name
       value: Player
