@@ -26,14 +26,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        // Regla del Singleton: Si ya existe uno, se destruye el nuevo
-        if (Instance != null && Instance != FindAnyObjectByType<GameManager>())
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-        DontDestroyOnLoad(gameObject); // No se destruye al cambiar de escena
+       
     }
 
     void Start()
