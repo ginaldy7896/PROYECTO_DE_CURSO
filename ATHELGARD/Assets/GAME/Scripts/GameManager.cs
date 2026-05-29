@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
 
     // =========================
 
-    void ActivarGameOver()
+    public void ActivarGameOver()
     {
         Time.timeScale = 0f;
 

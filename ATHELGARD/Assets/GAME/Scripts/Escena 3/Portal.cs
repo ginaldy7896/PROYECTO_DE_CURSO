@@ -8,6 +8,11 @@ public class Portal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Cursor.lockState =
+                CursorLockMode.None;
+
+            Cursor.visible = true;
+
             panelFinal.SetActive(true);
 
             Time.timeScale = 0f;

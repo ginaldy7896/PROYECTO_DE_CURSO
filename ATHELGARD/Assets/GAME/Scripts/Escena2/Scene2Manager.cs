@@ -15,7 +15,8 @@ public class Scene2Manager : MonoBehaviour
     private int fragmentosActuales = 0;
 
 
-    private bool instruccionesCompletadas = false;
+    //private bool instruccionesCompletadas = false;
+    public GameObject puertaFinal;
 
 
     private void Awake()
@@ -61,7 +62,7 @@ public class Scene2Manager : MonoBehaviour
         textoMision.text = "Misión completada";
 
         Debug.Log("MISIÓN COMPLETADA");
-
+        puertaFinal.SetActive(true);
         // Aquí puedes:
         // abrir puerta
         // activar cinemática

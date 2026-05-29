@@ -5,6 +5,8 @@ public class PortalVideo : MonoBehaviour
 {
     public GameObject puertaFinal;
 
+    //public int numeroEscenaSiguiente = 2;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,8 +34,9 @@ public class PortalVideo : MonoBehaviour
         }
     }
 
-    public void siguienteEscena()
+    public void siguienteEscena(int numeroEscena)
     {
-        SceneManager.LoadScene(2);
+        Debug.Log("Cargando escena " + numeroEscena);
+        SceneManager.LoadScene(numeroEscena);
     }
 }
