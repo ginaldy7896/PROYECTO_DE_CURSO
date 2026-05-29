@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-
 public class MovoJugadorTCP : MonoBehaviour
 {
     private CharacterController controller;
@@ -9,7 +8,7 @@ public class MovoJugadorTCP : MonoBehaviour
     public float veloRota = 10f;
     public float walkSpeed = 2f;
     public float runSpeed = 5f;
-   
+
 
     [Header("Suelo")]
     public LayerMask piso;
@@ -71,7 +70,7 @@ public class MovoJugadorTCP : MonoBehaviour
         {
             currentSpeed = runSpeed;
         }
-        
+
 
         Vector3 moveInput =
             Quaternion.Euler(
@@ -143,7 +142,7 @@ public class MovoJugadorTCP : MonoBehaviour
 
         }
 
-        
+
 
         if (X > 0)
         {

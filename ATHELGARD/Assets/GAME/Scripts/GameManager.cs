@@ -5,6 +5,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject panelInformacion;
 
     [Header("Vidas")]
     public int vidasMaximas = 4;
@@ -122,5 +123,12 @@ public class GameManager : MonoBehaviour
             SceneManager
             .GetActiveScene()
             .buildIndex);
+    }
+
+    
+    public void RegresarAlMenuPrincipal()
+    {
+        
+        SceneManager.LoadScene(0);
     }
 }
