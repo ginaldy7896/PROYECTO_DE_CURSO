@@ -3,10 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipalManager : MonoBehaviour
 {
-    public GameObject panelInformacion; 
+    public GameObject panelInformacion;
 
     public void EmpezarJuego()
     {
+       
         SceneManager.LoadScene(1);
     }
 
@@ -24,5 +25,12 @@ public class MenuPrincipalManager : MonoBehaviour
     {
         Debug.Log("Saliendo del juego...");
         Application.Quit();
+    }
+
+    
+    public void RegresarAlMenuPrincipal()
+    {
+        
+        SceneManager.LoadScene(0);
     }
 }

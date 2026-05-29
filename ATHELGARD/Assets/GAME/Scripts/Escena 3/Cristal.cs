@@ -18,7 +18,6 @@ public class Cristal : MonoBehaviour
 
     void Update()
     {
-        // Flota arriba y abajo
         transform.position =
             posicionInicial +
             Vector3.up *
@@ -27,7 +26,6 @@ public class Cristal : MonoBehaviour
                 velocidadFlotar
             ) * altura;
 
-        // Gira
         transform.Rotate(
             0,
             velocidadRotacion *
