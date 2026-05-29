@@ -10,23 +10,17 @@ public class FireCollector : MonoBehaviour
 
     public GameObject portalFinal;
 
-    public void Recoger(
-        GameObject fuego)
+    public void Recoger(GameObject fuego)
     {
         fuegos.Add(fuego);
 
-        Debug.Log(
-        "Recolectados: "
-        + fuegos.Count);
+        Debug.Log("Recolectados: " + fuegos.Count);
 
-        if (
-        fuegos.Count >= necesarios)
+        if (fuegos.Count >= necesarios)
         {
-            portalFinal.SetActive(
-            true);
+            portalFinal.SetActive(true);
 
-            Debug.Log(
-            "Portal activado");
+            Debug.Log("Portal activado");
         }
     }
 }
